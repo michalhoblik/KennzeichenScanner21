@@ -1,19 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
+﻿using KennzeichenScanner21.Interface;
 using Xamarin.Forms;
 
 namespace KennzeichenScanner21
 {
-	public partial class App : Application
+    public partial class App : Application
 	{
-		public App ()
+        public static ICommonPlatform CommonPlatform;
+        public static IKennzeichenRecognizer KennzeichenRecognizer;
+
+        public App ()
 		{
 			InitializeComponent();
 
-			MainPage = new KennzeichenScanner21.MainPage();
+            CommonPlatform = DependencyService.Get<ICommonPlatform>();
+            KennzeichenRecognizer = DependencyService.Get<IKennzeichenRecognizer>();
+
+            MainPage = new KennzeichenScanner21.MainPage();
 		}
 
 		protected override void OnStart ()

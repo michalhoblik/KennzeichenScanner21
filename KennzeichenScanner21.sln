@@ -9,6 +9,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KennzeichenScanner21.iOS", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KennzeichenScanner21", "KennzeichenScanner21\KennzeichenScanner21\KennzeichenScanner21.csproj", "{073AA167-47EA-4906-9AE3-0FD2D1D2538A}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libraries", "Libraries", "{B9B37051-3C3F-4F1D-B331-553CC269EBBA}"
+	ProjectSection(SolutionItems) = preProject
+		Libraries\OpenALPR Xamarin.Android Binding.dll = Libraries\OpenALPR Xamarin.Android Binding.dll
+		Libraries\OpenALPR Xamarin.Android Library.dll = Libraries\OpenALPR Xamarin.Android Library.dll
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Ad-Hoc|Any CPU = Ad-Hoc|Any CPU
