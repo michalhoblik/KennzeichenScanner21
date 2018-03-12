@@ -18,6 +18,9 @@
     <AndroidUseLatestPlatformSdk>true</AndroidUseLatestPlatformSdk>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <AndroidKeyStore>false</AndroidKeyStore>
+    <AndroidSigningKeyStore>C:\Users\mhoblik\AppData\Local\Xamarin\Mono for Android\Keystore\kennzeichenscanner21\kennzeichenscanner21.keystore</AndroidSigningKeyStore>
+    <AndroidSigningStorePass>MHcorp1123581321#</AndroidSigningStorePass>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>

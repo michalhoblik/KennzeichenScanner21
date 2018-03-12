@@ -4,5 +4,5 @@
 	<uses-permission android:name="android.permission.CAMERA" />
 	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 	<uses-permission android:name="android.permission.FLASHLIGHT" android:permissionGroup="android.permission-group.HARDWARE_CONTROLS" android:protectionLevel="normal" />
-	<application android:label="KennzeichenScanner21.Android" android:largeHeap="true" android:icon="@drawable/icon"></application>
+	<application android:label="KennzeichenScanner21" android:largeHeap="true" android:icon="@drawable/icon"></application>
 </manifest>
