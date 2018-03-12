@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="KennzeichenScanner21.Pages.MainScanPage">
+  <!--Pages can be added as references or inline-->
+    <ContentPage Title="Scan">
+        <ContentPage.Content>
+            <StackLayout>
+                <Button x:Name="btnRecognize" Text="Scan Kennzeichen" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+                <StackLayout Orientation="Vertical" VerticalOptions="EndAndExpand" HorizontalOptions="FillAndExpand">
+                    <Label Text="Result:" FontSize="Large" FontAttributes="Bold" />
+                    <Label x:Name="lblResult"  FontSize="Medium" />
+                </StackLayout>
+            </StackLayout>
+        </ContentPage.Content>
+    </ContentPage>
+    <ContentPage Title="Meine Scans">
+        <ContentPage.Content>
+            <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <ListView x:Name="AlprKennzeichenView" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" HasUnevenRows="True">
+                    <ListView.Header>
+                        <ContentView BackgroundColor="Gray">
+                            <Label Margin="10" HorizontalOptions="StartAndExpand" Text="Kennzeichen gefunden:" TextColor="White"/>
+                        </ContentView>
+                    </ListView.Header>
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="WhiteSmoke" Padding="5">
+                                    <Label Text="{Binding LicensePlate, StringFormat='Kennzeichen: {0}'}" TextColor="Black" FontSize="Large" FontAttributes="Bold" />
+                                    <Label Text="{Binding Confidence, StringFormat='Zuversichtlichkeit: {0}%'}" TextColor="Black" FontSize="Medium" />
+                                    <Label Text="{Binding TimeStamp, StringFormat='Zeitstempel: {0}'}" TextColor="Black" FontSize="Medium" />
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </ContentPage.Content>
+    </ContentPage>
+</TabbedPage>

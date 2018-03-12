@@ -474,7 +474,7 @@ namespace KennzeichenScanner21.Droid.Renderers
                 System.IO.File.WriteAllBytes(imagePath, imageContent);
 
                 // get kennzeichen when foto saved
-                var result = App.KennzeichenRecognizer.Recognize(imagePath, "eu", "de");
+                var result = App.KennzeichenRecognizer.Recognize(imagePath, "eu");
 
                 // delete tempfoto
                 System.IO.File.Delete(imagePath);

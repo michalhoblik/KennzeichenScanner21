@@ -6,7 +6,7 @@ using System;
 
 namespace KennzeichenScanner21.Droid
 {
-    [Activity(Label = "KennzeichenScanner21", Icon = "@drawable/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+    [Activity(Label = "KennzeichenScanner21", Icon = "@drawable/icon", Theme = "@style/MainTheme", MainLauncher = true, ResizeableActivity = false, LaunchMode = LaunchMode.SingleInstance, ScreenOrientation = ScreenOrientation.Portrait, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
         private Action<int, Result, Intent> _activityResultCallback;

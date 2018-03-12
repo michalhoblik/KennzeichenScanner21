@@ -5,8 +5,6 @@ namespace KennzeichenScanner21.Droid.Helpers
 {
     public class CameraOrientationListener : OrientationEventListener
     {
-        public const int ORIENTATION_UNKNOWN =0;
-
         private int _currentNormalizedOrientation;
         private int _rememberedNormalizedOrientation;
 
@@ -16,7 +14,7 @@ namespace KennzeichenScanner21.Droid.Helpers
 
         public override void OnOrientationChanged(int orientation)
         {
-            if (orientation != ORIENTATION_UNKNOWN)
+            if (orientation != OrientationUnknown)
             {
                 _currentNormalizedOrientation = normalize(orientation);
             }

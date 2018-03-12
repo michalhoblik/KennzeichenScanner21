@@ -15,7 +15,8 @@ namespace KennzeichenScanner21
             CommonPlatform = DependencyService.Get<ICommonPlatform>();
             KennzeichenRecognizer = DependencyService.Get<IKennzeichenRecognizer>();
 
-            MainPage = new KennzeichenScanner21.MainPage();
+            //MainPage = new KennzeichenScanner21.MainPage();
+            MainPage = new Pages.MainScanPage();
 		}
 
 		protected override void OnStart ()
